@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <listeners>
+		<listener class-name="com.suite.utility.ListenerClass"></listener>
+		<listener class-name="com.suite.utility.TestRetryAnalyzerListner"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+  	<parameter name="browser" value="chrome"/>
+  	<groups>
+  		<run>
+  			<include name="Sanity"></include>
+  		</run>
+  	</groups>
+    <classes>
+      <class name="com.suite.test.LoginPageTest"/>
+      <!-- <class name="com.orangehrm.testcases.BuzzPageTest"/>
+      <class name="com.orangehrm.testcases.TimesheetsPageTest"/>
+      <class name="com.orangehrm.testcases.LeavePageTest"/>
+      <class name="com.orangehrm.testcases.PIMpageTest"/>
+      <class name="com.orangehrm.testcases.HomePageTest"/> -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
