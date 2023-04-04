@@ -14,10 +14,10 @@
         <protocol>http</protocol>
         
         <!-- title of the document -->
-        <documentTitle>CNHI DEVELOPER PORTAL</documentTitle>
+        <documentTitle>LUMA</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>CNHi Developer Portal
+        <reportName>LUMA
          <![CDATA[
                 <img src='D:\project_img.png'/>
             ]]>

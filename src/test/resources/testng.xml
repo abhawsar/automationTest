@@ -26,7 +26,7 @@
 			<class name="com.suite.test.RegisterUserTest" />
 			<class name="com.suite.test.CreateCompanyTest" /> 
 			<class name="com.suite.test.AppRegistrationTest" /> -->
-			<class name="com.suite.test.CompanyAssociationTest" />
+			<class name="com.suite.test.RegistrationTest" />
 			
 			
 			
