@@ -32,7 +32,7 @@ public class ExtentManager {
 		extent.attachReporter(htmlReporter);
 		
 		extent.setSystemInfo("HostName", "MyHost");
-		extent.setSystemInfo("ProjectName", "CNHI Developer Portal");
+		extent.setSystemInfo("ProjectName", "Code Test");
 		extent.setSystemInfo("Tester", "Amrita");
 		extent.setSystemInfo("OS", "Win10");
 		extent.setSystemInfo("Browser", "Chrome");

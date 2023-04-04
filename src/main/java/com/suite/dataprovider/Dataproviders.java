@@ -6,7 +6,6 @@ package com.suite.dataprovider;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 import org.testng.annotations.DataProvider;
 
@@ -24,26 +23,22 @@ public class Dataproviders extends Base {
 	String stagepath = System.getProperty("user.dir") + "/src/test/resources/TestData/TestDataSheet.xlsx";
 	String devpath = System.getProperty("user.dir") + "/src/test/resources/TestData/TestDataDevSheet.xlsx";
 
+	String excelPath = System.getProperty("user.dir") + "/src/test/resources/TestData/RegistrationSheet.xlsx";
+
 	String url = prop.getProperty("url");
 
-	@DataProvider(name = "AddUser")
+	@DataProvider(name = "CreateAccount")
 	public Object[][] newUserTestData() {
 		// Totals rows count
-		if (url.equals("https://euapidevportiwbapp01.azurewebsites.net/home")) {
+		if (url.equals("https://magento.softwaretestingboard.com/")) {
 
-			obj = new ExcelLibrary(stagepath);
-
-		} else if (url.equals("https://euapidevportdwbapp01.azurewebsites.net/home"))
-
-		{
-
-			obj = new ExcelLibrary(devpath);
+			obj = new ExcelLibrary(excelPath);
 		}
 
-		int rows = obj.getRowCount("User"); // Sheet name
+		int rows = obj.getRowCount("Registration"); // Sheet name
 		System.out.println("Total No. of Rows:" + rows);
 		// Total Columns
-		int column = obj.getColumnCount("User");
+		int column = obj.getColumnCount("Registration");
 		int actRows = rows - 1;
 		System.out.println("Total No. of Rows:" + actRows);
 
@@ -51,7 +46,7 @@ public class Dataproviders extends Base {
 
 		for (int i = 0; i < actRows; i++) {
 			for (int j = 0; j < column; j++) {
-				data[i][j] = obj.getCellData("User", j, i + 2);
+				data[i][j] = obj.getCellData("Registration", j, i + 2);
 			}
 		}
 		return data;
